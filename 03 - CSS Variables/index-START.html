@@ -42,9 +42,33 @@
     input {
       width: 100px;
     }
+    :root {
+      --base:#ffc600;
+      --spacing: 10px;
+      --blur:10px;
+
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
   </style>
 
   <script>
+    const inputs = document.querySelectorAll('input');
+
+    function handleInput(e) {
+      console.log(this.value);
+      console.log(this.name);
+      const suffix = this.dataset.sizing || '';
+     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
+    }
+    inputs.forEach(input => input.addEventListener('change', handleInput));
+    inputs.forEach(input => input.addEventListener('mousemove', handleInput));
+
+
   </script>
 
 </body>
