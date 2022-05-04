@@ -6,5 +6,6 @@
   
 Selects all elements that have the given attribute. Syntax: [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value] Example: [autoplay] will match all elements that have the autoplay attribute set (to any value).
 3-Behaviour delegation:
+ A way to add a single eventlistner once to the parent dom for mutiple child elements(support for adding extra)
   
   
