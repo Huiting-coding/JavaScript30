@@ -62,8 +62,8 @@ function rgbSplit(pixels) {
   return pixels;
 }
 
-function greenScreen(pixels) {
-  const level = {};
-}
+// function greenScreen(pixels) {
+//   const level = {};
+// }
 getVideo();
 video.addEventListener('canplay', paintToCanvas);
